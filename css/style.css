@@ -32,7 +32,9 @@ img {
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     overflow: hidden;
+    -webkit-box-shadow: 0px 0px 20px 10px #000;
     box-shadow: 0px 0px 20px 10px #000;
+    -webkit-transform: translate(0,0) scale(0) rotateX(0deg) rotateY(0deg);
     transform: translate(0,0) scale(0) rotateX(0deg) rotateY(0deg);
     opacity: 0;
 }
@@ -40,7 +42,11 @@ img {
 header {
     width: 1200px;
     height: 72px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     background: rgba(0, 0, 0, 0.6);
@@ -58,6 +64,7 @@ header {
     overflow: hidden;
 /*    -webkit-mask: url(../img/menu_icon.svg) no-repeat left 50%;*/
 /*    mask: url(../img/menu_icon.svg) no-repeat left 50%;*/
+    -webkit-transition: .5s;
     transition: .5s;
 }
 .menu_icon:hover {
@@ -73,6 +80,7 @@ header {
     left: 0;
     z-index: 5;
     max-width: 0px;
+    -webkit-transition: .8s;
     transition: .8s;
 }
 .menu_icon:hover::after {
@@ -99,11 +107,16 @@ header {
     margin-left: 100px;
     margin-right: 80px;
     font-size: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 .gnb_item {
     opacity: .7;
+    -webkit-transition: .3s;
     transition: .3s;
 }
 .gnb_item:hover {
@@ -135,6 +148,7 @@ header {
     top: 0;
     left: 0;
     opacity: 0;
+    -webkit-transition: .5s;
     transition: .5s;
 }
 .search:hover a::after {
@@ -144,7 +158,11 @@ header {
     width: 180px;
     background: linear-gradient(-45deg,#c458f0,#007cff);
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 .sign_up_icon {
@@ -165,12 +183,15 @@ header {
     line-height: 34px;
     font-size: 14px;
     padding: 0px 16px;
+    -webkit-transition: .5s;
     transition: .5s;
 }
 .sign_btn:hover {
     background: rgba(255, 255, 255, 0.2);
+    -webkit-box-shadow: 0px 0px 3px #222;
     box-shadow: 0px 0px 3px #222;
     border-color: transparent;
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
 .main_blur {
@@ -205,12 +226,19 @@ header {
     height: 56px;
     border: 1px solid white;
     margin-top: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     overflow: hidden;
     position: relative;
     z-index: 1;
+    -webkit-transition: .5s;
     transition: .5s;
 }
 .play_icon {
@@ -223,12 +251,14 @@ header {
     content: '';
     width: 100%;
     height: 100%;
+    background: -webkit-gradient(linear,left top, right top,from(#c458f0),to(#007cff));
     background: linear-gradient(90deg,#c458f0,#007cff);
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     opacity: 0;
+    -webkit-transition: .5s;
     transition: .5s;
 }
 .main_btn:hover {
@@ -255,13 +285,13 @@ section {
     padding-top: 120px;
     padding-left: 90px;
     padding-bottom: 160px;
+    -webkit-box-shadow: 0px 0px 20px 10px #000;
     box-shadow: 0px 0px 20px 10px #000;
     overflow: hidden;
+    -webkit-transform: translate(0,0) scale(1,0) rotateX(0deg) rotateY(0deg);
     transform: translate(0,0) scale(1,0) rotateX(0deg) rotateY(0deg);
+    -webkit-transform-origin: top;
     transform-origin: top;
-/*    max-height: 0;*/
-/*    opacity: 0;*/
-
 }
 .i_headline {
     font-size: 40px;
@@ -281,6 +311,7 @@ section {
     height: 56px;
     border: 1px solid #222;
     padding-top: 19px;
+    -webkit-transition: .5s;
     transition: .5s;
 }
 .i_btn:hover {
@@ -295,6 +326,7 @@ section {
     background: #ffffff;
     margin-top: 40px;
     overflow: hidden;
+    -webkit-box-shadow: 0px 0px 20px 10px #000;
     box-shadow: 0px 0px 20px 10px #000;
     position: relative;
     opacity: 0;
@@ -310,13 +342,17 @@ section {
     position: absolute;
     left: 90px;
     top: 0;
+    -webkit-transform: translate(0,0) scale(1) rotateX(900deg) rotateY(0deg);
     transform: translate(0,0) scale(1) rotateX(900deg) rotateY(0deg);
+    -webkit-transition: .5s;
     transition: .5s;
+    -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
 }
 .life_list_item {
     max-width: 340px;
     margin: 0 auto;
+    -webkit-transition: .5s;
     transition: .5s;
 }
 .life_list_item:nth-child(2) {
@@ -327,6 +363,7 @@ section {
     max-width: 460px;
 }
 .life_list_item > a > img {
+    -webkit-box-shadow: 0px 0px 10px rgba(19, 41, 96, 0.7);
     box-shadow: 0px 0px 10px rgba(19, 41, 96, 0.7);
     border-radius: 28px;
 }
@@ -334,6 +371,7 @@ section {
 .life_txt {
     float: right;
     margin-right: 80px;
+    -webkit-transform: translate(120%,0) scale(1) rotateX(0deg) rotateY(0deg);
     transform: translate(120%,0) scale(1) rotateX(0deg) rotateY(0deg);
 
 }
@@ -359,6 +397,7 @@ section {
     border: 1px solid #222;
     height: 56px;
     padding-top: 19px;
+    -webkit-transition: .5s;
     transition: .5s;
 }
 .life_more:hover {
@@ -369,12 +408,15 @@ section {
     height: 56px;
     padding-top: 19px;
     color: white;
+    background: -webkit-gradient(linear,left top, right top,from(#c458f0),to(#007cff));
     background: linear-gradient(90deg,#c458f0,#007cff);
     margin-left: 20px;
     border: 1px solid transparent;
+    -webkit-transition: .5s;
     transition: .5s;
 }
 .life_agree_btn:hover {
+    background : -webkit-gradient(linear,left top, left bottom,from(white),to(white)), -webkit-gradient(linear,left top, right top,from(#c458f0),to(#007cff));
     background : linear-gradient(white,white), linear-gradient(90deg,#c458f0,#007cff);
     background-clip: padding-box,border-box;
     background-origin: border-box;
@@ -390,8 +432,11 @@ section {
     margin-top: 40px;
     background:linear-gradient(-195deg, transparent 50%,#672fd7 50%),linear-gradient(90deg,#c458f0,#007cff);
     text-align: center;
+    -webkit-box-shadow: 0px 0px 20px 10px #000;
     box-shadow: 0px 0px 20px 10px #000;    
+    -webkit-transform: translate(0,0) scale(1,0) rotateX(0deg) rotateY(0deg);    
     transform: translate(0,0) scale(1,0) rotateX(0deg) rotateY(0deg);
+    -webkit-transform-origin: top;
     transform-origin: top;
     overflow: hidden;
 
@@ -420,19 +465,15 @@ section {
     padding: 40px 20px;
     float: left;
     margin-left: 80px;
+    -webkit-transform: translate(0,150%) scale(1) rotateX(0deg) rotateY(0deg);
     transform: translate(0,150%) scale(1) rotateX(0deg) rotateY(0deg);
+    -webkit-transition: .5s;
     transition: .5s;
 }
 .gift_list_item:first-child {
     margin-left: 0;
-/*    transition-delay: .5s;*/
 }
-.gift_list_item:nth-child(2) {
-/*    transition-delay: .3s;*/
-}
-.gift_list_item:last-child {
-/*    transition-delay: .8s;*/
-}
+
 .gift_list_title {
     font-size: 40px;
     font-weight: 700;
@@ -447,6 +488,7 @@ section {
     position: absolute;
     bottom: -18px;
     right: 0px;
+    -webkit-transition: .5s;
     transition: .5s;
 }
 .gift_list_txt {
@@ -460,16 +502,21 @@ section {
     height: 56px;
     padding-top: 19px;
     border: 1px solid transparent;
+    background: -webkit-gradient(linear,left top, left bottom,from(white),to(white)),-webkit-gradient(linear,left top, right top,from(#c458f0),to(#007cff));
     background: linear-gradient(white,white),linear-gradient(90deg,#c458f0,#007cff);
     background-clip: padding-box,border-box;
     background-origin: border-box;
+    -webkit-transition: .5s;
     transition: .5s;
 }
 .gift_list_item:hover {
+    -webkit-transform: translateY(-20px);
     transform: translateY(-20px);
+    -webkit-transition: .5s;
     transition: .5s;
     background: #222;
     color: white;
+    -webkit-box-shadow: 0px 5px 10px rgba(23, 22, 22, 0.75);
     box-shadow: 0px 5px 10px rgba(23, 22, 22, 0.75);
 }
 .gift_list_item:hover .gift_list_title::before {
@@ -493,7 +540,9 @@ section {
     background: white;
     text-align: center;
     margin-top: 40px;
+    -webkit-box-shadow: 0px 0px 20px 10px #000;
     box-shadow: 0px 0px 20px 10px #000;
+    -webkit-transform: translate(0,0) scale(0,1) rotateX(0deg) rotateY(0deg);
     transform: translate(0,0) scale(0,1) rotateX(0deg) rotateY(0deg);
 
 }
@@ -558,22 +607,27 @@ section {
     height: 56px;
     padding-top: 19px;
     border: 1px solid #222;
+    -webkit-transition: .5s;
     transition: .5s;
 }
 .rate_btn:hover {
     color: white;
+    background: -webkit-gradient(linear,left top, right top,from(#c458f0),to(#007cff));
     background: linear-gradient(90deg,#c458f0,#007cff);
     border-color: transparent;
 }
 
 
 /*footer*/
+@-webkit-keyframes ft_bg {
+    100% {background-position : bottom left 100%}
+}
 @keyframes ft_bg {
     100% {background-position : bottom left 100%}
 }
 footer {
     width: 1200px;
-    background: /*url(../img/ft_bg.svg) bottom*/ white;
+    background: white;
     background-repeat: repeat-x;
     margin: 0 auto;
     padding: 360px 90px 120px 90px;
@@ -582,14 +636,28 @@ footer {
     border-bottom-right-radius: 25px;
     overflow: hidden;
     color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     position: relative;
     z-index: 1;
+    -webkit-box-shadow: 0px 0px 20px 10px #000;
     box-shadow: 0px 0px 20px 10px #000;
+    -webkit-transform: translate(0,0) scale(0) rotateX(0deg) rotateY(0deg);
     transform: translate(0,0) scale(0) rotateX(0deg) rotateY(0deg);
     opacity: 0;
 
+}
+@-webkit-keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1200px;
+  }
 }
 @keyframes wave {
   0% {
@@ -599,11 +667,23 @@ footer {
     margin-left: -1200px;
   }
 }
-@keyframes swell {
+@-webkit-keyframes swell {
   0%, 100% {
+    -webkit-transform: translate3d(0,-30px,0);
     transform: translate3d(0,-30px,0);
   }
   50% {
+    -webkit-transform: translate3d(0,10px,0);
+    transform: translate3d(0,10px,0);
+  }
+}
+@keyframes swell {
+  0%, 100% {
+    -webkit-transform: translate3d(0,-30px,0);
+    transform: translate3d(0,-30px,0);
+  }
+  50% {
+    -webkit-transform: translate3d(0,10px,0);
     transform: translate3d(0,10px,0);
   }
 }
@@ -618,6 +698,7 @@ footer::before {
     background-repeat: repeat-x;
     z-index: -2;
     opacity: .8;
+    -webkit-animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) .125s infinite, swell 7s ease 1.25s infinite;
     animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) .125s infinite, swell 7s ease 1.25s infinite;
 }
 footer::after {
@@ -631,6 +712,7 @@ footer::after {
     background-repeat: repeat-x;
     z-index: -1;
     opacity: 1;
+    -webkit-animation:wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
     animation:wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
 }
 .ft_logo {
@@ -642,10 +724,10 @@ footer::after {
     display: block;
     height: 32px;
 }
-.ft_list {
-    
-}
+
 .ft_list_top,.ft_list_bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .ft_list_top {
@@ -663,12 +745,17 @@ footer::after {
 }
 .sns {
     width: 144px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 .sns_item {
     width: 32px;
     height: 32px;
+    -webkit-transition: .5s;
     transition: .5s;
 }
 .facebook {
@@ -686,26 +773,32 @@ footer::after {
     height: 32px;
 }
 .sns_item:hover {
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
 
 
 /*등장 효과*/
 .show {
+    -webkit-transform: translate(0,0) scale(1) rotateX(0deg) rotateY(0deg);
     transform: translate(0,0) scale(1) rotateX(0deg) rotateY(0deg);
     max-width: 100%;
     max-height: 100%;
     opacity: 1;
+    -webkit-transition: 1.2s;
     transition: 1.2s;
 }
 
 .gift_show_01 {
+    -webkit-transition-delay: .8s;
     transition-delay: .8s
 }
 .gift_show_02 {
+    -webkit-transition-delay: .3s;
     transition-delay: .3s
 }
 .gift_show_03 {
+    -webkit-transition-delay: .5s;
     transition-delay: .5s
 }
 
