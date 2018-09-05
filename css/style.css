@@ -32,6 +32,8 @@ img {
     border-radius: 25px;
     overflow: hidden;
     box-shadow: 0px 0px 20px 10px #000;
+    transform: translate(0,0) scale(0) rotateX(0deg) rotateY(0deg);
+    opacity: 0;
 }
 
 header {
@@ -245,6 +247,7 @@ section {
 }
 .iphone {
     width: 1200px;
+    height: auto;
     margin-top: 40px;
     background: url(../img/iphone.png) no-repeat bottom right 70px #f2f2f2;
     color: #222;
@@ -252,6 +255,11 @@ section {
     padding-left: 90px;
     padding-bottom: 160px;
     box-shadow: 0px 0px 20px 10px #000;
+    overflow: hidden;
+    transform: translate(0,0) scale(1,0) rotateX(0deg) rotateY(0deg);
+    transform-origin: top;
+/*    max-height: 0;*/
+/*    opacity: 0;*/
 
 }
 .i_headline {
@@ -278,6 +286,9 @@ section {
     background: #222;
     color: white;
 }
+
+
+/*life*/
 .life {
     width: 1200px;
     background: #ffffff;
@@ -285,6 +296,7 @@ section {
     overflow: hidden;
     box-shadow: 0px 0px 20px 10px #000;
     position: relative;
+    opacity: 0;
 }
 .life::after {
     content: '';
@@ -299,6 +311,7 @@ section {
     left: 90px;
 /*    top: -120px;*/
     top: 0;
+    transform: translate(0,0) scale(1) rotateX(1800deg) rotateY(0deg);
     transition: .5s;
 }
 .life_list_item {
@@ -321,6 +334,8 @@ section {
 .life_txt {
     float: right;
     margin-right: 80px;
+    transform: translate(120%,0) scale(1) rotateX(0deg) rotateY(0deg);
+
 }
 .life_headline {
     font-size: 40px;
@@ -375,7 +390,11 @@ section {
     margin-top: 40px;
     background:linear-gradient(-195deg, transparent 50%,#672fd7 50%),linear-gradient(90deg,#c458f0,#007cff);
     text-align: center;
-    box-shadow: 0px 0px 20px 10px #000;
+    box-shadow: 0px 0px 20px 10px #000;    
+    transform: translate(0,0) scale(1,0) rotateX(0deg) rotateY(0deg);
+    transform-origin: top;
+    overflow: hidden;
+
 }
 .gift_title {
     margin-bottom: 40px;
@@ -401,10 +420,18 @@ section {
     padding: 40px 20px;
     float: left;
     margin-left: 80px;
+    transform: translate(0,150%) scale(1) rotateX(0deg) rotateY(0deg);
     transition: .5s;
 }
 .gift_list_item:first-child {
     margin-left: 0;
+/*    transition-delay: .5s;*/
+}
+.gift_list_item:nth-child(2) {
+/*    transition-delay: .3s;*/
+}
+.gift_list_item:last-child {
+/*    transition-delay: .8s;*/
 }
 .gift_list_title {
     font-size: 40px;
@@ -440,6 +467,7 @@ section {
 }
 .gift_list_item:hover {
     transform: translateY(-20px);
+    transition: .5s;
     background: #222;
     color: white;
     box-shadow: 0px 5px 10px rgba(23, 22, 22, 0.75);
@@ -466,6 +494,8 @@ section {
     text-align: center;
     margin-top: 40px;
     box-shadow: 0px 0px 20px 10px #000;
+    transform: translate(0,0) scale(0,1) rotateX(0deg) rotateY(0deg);
+
 }
 .rate_title {
     color: #222;
@@ -556,6 +586,9 @@ footer {
     position: relative;
     z-index: 1;
     box-shadow: 0px 0px 20px 10px #000;
+    transform: translate(0,0) scale(0) rotateX(0deg) rotateY(0deg);
+    opacity: 0;
+
 }
 @keyframes wave {
   0% {
@@ -656,6 +689,22 @@ footer::after {
 }
 
 
+/*등장 효과*/
+.show {
+    transform: translate(0,0) scale(1) rotateX(0deg) rotateY(0deg);
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 1;
+    transition: 1.2s;
+}
 
-
+.gift_show_01 {
+    transition-delay: .8s
+}
+.gift_show_02 {
+    transition-delay: .3s
+}
+.gift_show_03 {
+    transition-delay: .5s
+}
 
