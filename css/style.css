@@ -787,6 +787,7 @@ footer::after {
     opacity: 1;
     -webkit-transition: 1.2s;
     transition: 1.2s;
+    border-radius: 20px;
 }
 
 .gift_show_01 {
